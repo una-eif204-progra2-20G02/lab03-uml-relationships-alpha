@@ -6,4 +6,4 @@ set(CMAKE_CXX_STANDARD 14)            # Enable c++14 standard
 set(SOURCE_FILES main.cpp Conductor.h Conductor.cpp Pasajero.cpp Pasajero.h Persona.cpp Persona.h Asientos.h Asientos.cpp Bus.h Bus.cpp Lineas.h Lineas.cpp Paradas.h Paradas.cpp Tiquete.h Tiquete.cpp TransportePublico.cpp TransportePublico.h Tren.h Tren.cpp)
 
 # Add executable target with source files listed in SOURCE_FILES variable
-add_executable(simple_example ${SOURCE_FILES})
+add_executable(lab03-uml-relationships-alpha ${SOURCE_FILES})
