@@ -2,6 +2,7 @@
 // Created by computer on 8/12/2020.
 //
 
+
 #include "Lineas.h"
 
 Lineas::Lineas() {
@@ -43,6 +44,9 @@ Tren* Lineas::getTren() const{
 Paradas* Lineas::getParadas()const{
     return _paradas;
 }
+Hora* Lineas::getHora()const{
+    return _hora;
+}
 
 void Lineas::setCodigo(std::string codigo){
     _codigo=codigo;
@@ -59,7 +63,9 @@ void Lineas::setTren(Tren* tren){
 void Lineas::setParadas(Paradas* parada){
     _paradas=parada;
 }
-
+void Lineas::setHora(Hora* hora){
+    _hora=hora;
+}
 void Lineas::addBus(Bus* const bus){
     _listaBus.push_back(*bus);
 }
@@ -68,6 +74,9 @@ void Lineas::addParada(Paradas* const parada){
 }
 void Lineas::addTren(Tren* const tren){
     _listaTren.push_back(*tren);
+}
+void Lineas::addHora(Hora* const hora){
+    _listaHora.push_back(*hora);
 }
 std::string Lineas::toString() const{
     std::stringstream s;
@@ -90,8 +99,12 @@ std::string Lineas::toString() const{
     }
     s<<"\n";
     for(int j=0;j<_listaParadas.size();j++){
-        s<<j+1<<"\t";
-        s<<_listaParadas.data()[j].toString();
+        s<<j+1<<"  ";
+        s<<"\t"<<_listaParadas.data()[j].toString();
+    }
+    for(int k=0;k<_listaHora.size();k++){
+        s<<k+1<<"  "<<"Hora de Servicio Tren y Bus:"<<"\n";
+        s<<"\t"<<_listaHora.data()[k].toString();
     }
     return s.str();
 
