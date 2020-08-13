@@ -11,6 +11,18 @@ using namespace std;
  */
 int main(int argc, char** argv) {
 
+    Hora * _h0=new Hora("7:00 AM");
+    Hora * _h1=new Hora("8:00 AM");
+    Hora * _h2=new Hora("9:00A AM");
+    Hora * _h3=new Hora("10:00 AM");
+    Hora * _h4=new Hora("11:00 AM");
+    Hora * _h5=new Hora("12:00 MD");
+    Hora * _h6=new Hora("1:00 PM");
+    Hora * _h7=new Hora("2:00 PM");
+    Hora * _h8=new Hora("3:00 PM");
+    Hora * _h9=new Hora("4:00 PM");
+    Hora * _h10=new Hora("5:00 PM");
+
     Conductor* _con0=new Conductor("Mauricio", "Noriega", "1-209-8769",300000);
     Conductor* _con1=new Conductor("Salomon", "Mayorga", "4-2345-7654",365000);
     Conductor* _con2=new Conductor("Eladio", "Cruz", "1-9876-8765",370000);
@@ -87,6 +99,17 @@ int main(int argc, char** argv) {
 
     _line0->addTren(_tren0);
     _line0->addBus(_bus0);
+    _line0->addHora(_h0);
+    _line0->addHora(_h1);
+    _line0->addHora(_h2);
+    _line0->addHora(_h3);
+    _line0->addHora(_h4);
+    _line0->addHora(_h5);
+    _line0->addHora(_h6);
+    _line0->addHora(_h7);
+    _line0->addHora(_h8);
+    _line0->addHora(_h9);
+    _line0->addHora(_h10);
 
     Paradas* _pt0=new Paradas("Santo_Domingo");
     Paradas* _pt1=new Paradas("Llorente");
@@ -131,10 +154,28 @@ int main(int argc, char** argv) {
 
     _line1->addBus(_bus1);
     _line1->addTren(_tren1);
+    _line1->addHora(_h0);
+    _line1->addHora(_h1);
+    _line1->addHora(_h2);
+    _line1->addHora(_h3);
+    _line1->addHora(_h4);
+    _line1->addHora(_h5);
+    _line1->addHora(_h6);
+    _line1->addHora(_h7);
+    _line1->addHora(_h8);
+    _line1->addHora(_h9);
+    _line1->addHora(_h10);
 
     Paradas* _pt3=new Paradas("Santa_Ana");
     Paradas* _pt4=new Paradas("Pavas");
     Paradas* _pt5=new Paradas("Uruca");
+
+
+
+
+
+
+
 
     _line1->addParada(_pt3);
     _line1->addParada(_pt4);
@@ -192,3 +233,4 @@ int main(int argc, char** argv) {
 
     return 0;
 }
+
