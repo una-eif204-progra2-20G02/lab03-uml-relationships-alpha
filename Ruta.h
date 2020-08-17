@@ -30,6 +30,7 @@ public:
     virtual void addParada(Paradas*);
  //string
  std:: string toString();
+ //
 };
 
 
