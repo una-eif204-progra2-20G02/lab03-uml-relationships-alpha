@@ -4,33 +4,36 @@
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>490</x>
-      <y>570</y>
-      <w>220</w>
-      <h>230</h>
+      <x>510</x>
+      <y>600</y>
+      <w>290</w>
+      <h>280</h>
     </coordinates>
     <panel_attributes>Vehiculo
 --
 Atributos
 _conductores:Conductor;
 _pasajeros:Pasajero;
+_ruta:Ruta;
 --
 Metodos
 Vehiculo():Vehiculo;
-Vehiculo(Conductor,Pasajero):Vehiculo;
+Vehiculo(Conductor,Pasajero,Ruta):Vehiculo;
 ~Vehiculo():Vehiculo;
 getConductores() const: Conductor;
 getPasajeros() const: Pasajero;
+getRuta() const: Ruta;
 setConductores(Conductor):void;
 setPasajeros(Pasajero):void;
+setRuta(Ruta):void;
 toString() const:string;</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>1140</x>
-      <y>450</y>
+      <x>1160</x>
+      <y>480</y>
       <w>260</w>
       <h>140</h>
     </coordinates>
@@ -48,8 +51,8 @@ toString() const:string;
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>920</x>
-      <y>40</y>
+      <x>940</x>
+      <y>70</y>
       <w>250</w>
       <h>270</h>
     </coordinates>
@@ -76,8 +79,8 @@ toString() const:string;	toString
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>560</x>
-      <y>0</y>
+      <x>580</x>
+      <y>30</y>
       <w>210</w>
       <h>210</h>
     </coordinates>
@@ -100,8 +103,8 @@ toString():string;
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>60</x>
-      <y>480</y>
+      <x>80</x>
+      <y>510</y>
       <w>210</w>
       <h>130</h>
     </coordinates>
@@ -111,7 +114,7 @@ Atributos
 --
 Metodos
 Tren():Tren;
-Tren(Conductor,Pasajero):Tren;
+Tren(Conductor,Pasajero,Ruta):Tren;
 ~Tren():Tren;
 toString() const:string;</panel_attributes>
     <additional_attributes/>
@@ -119,8 +122,8 @@ toString() const:string;</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>60</x>
-      <y>680</y>
+      <x>80</x>
+      <y>710</y>
       <w>240</w>
       <h>180</h>
     </coordinates>
@@ -131,7 +134,7 @@ _placa:string;
 --
 Metodos
 Bus():Bus;
-Bus(Conductor,Pasajero,string):Bus;
+Bus(Conductor,Pasajero,Ruta,string):Bus;
 ~Bus():Bus
 getPlaca()const:string;
 setPlaca(string):void;
@@ -141,8 +144,8 @@ toString() const:string;</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>810</x>
-      <y>450</y>
+      <x>830</x>
+      <y>480</y>
       <w>320</w>
       <h>180</h>
     </coordinates>
@@ -163,8 +166,8 @@ toString() const:string;
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>930</x>
-      <y>300</y>
+      <x>950</x>
+      <y>330</y>
       <w>130</w>
       <h>170</h>
     </coordinates>
@@ -174,8 +177,8 @@ toString() const:string;
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>1030</x>
-      <y>300</y>
+      <x>1050</x>
+      <y>330</y>
       <w>230</w>
       <h>170</h>
     </coordinates>
@@ -185,21 +188,21 @@ toString() const:string;
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>620</x>
-      <y>580</y>
+      <x>640</x>
+      <y>610</y>
       <w>690</w>
       <h>360</h>
     </coordinates>
     <panel_attributes>lt=&lt;-
 m1=1
 m2=1..n</panel_attributes>
-    <additional_attributes>10.0;220.0;10.0;340.0;650.0;340.0;650.0;10.0</additional_attributes>
+    <additional_attributes>10.0;270.0;10.0;340.0;650.0;340.0;650.0;10.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>290</x>
-      <y>710</y>
+      <x>310</x>
+      <y>740</y>
       <w>220</w>
       <h>30</h>
     </coordinates>
@@ -209,8 +212,8 @@ m2=1..n</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>260</x>
-      <y>500</y>
+      <x>280</x>
+      <y>530</y>
       <w>270</w>
       <h>90</h>
     </coordinates>
@@ -218,21 +221,10 @@ m2=1..n</panel_attributes>
     <additional_attributes>250.0;70.0;250.0;10.0;10.0;10.0</additional_attributes>
   </element>
   <element>
-    <id>Relation</id>
-    <coordinates>
-      <x>600</x>
-      <y>500</y>
-      <w>30</w>
-      <h>90</h>
-    </coordinates>
-    <panel_attributes>lt=&lt;-</panel_attributes>
-    <additional_attributes>10.0;10.0;10.0;70.0</additional_attributes>
-  </element>
-  <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>210</x>
-      <y>200</y>
+      <x>230</x>
+      <y>230</y>
       <w>210</w>
       <h>180</h>
     </coordinates>
@@ -253,8 +245,8 @@ toString() const:string;
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>410</x>
-      <y>310</y>
+      <x>430</x>
+      <y>340</y>
       <w>160</w>
       <h>40</h>
     </coordinates>
@@ -267,8 +259,8 @@ bg=white</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>550</x>
-      <y>280</y>
+      <x>570</x>
+      <y>310</y>
       <w>230</w>
       <h>230</h>
     </coordinates>
@@ -292,21 +284,21 @@ toString() const:string;</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>700</x>
-      <y>600</y>
-      <w>130</w>
-      <h>40</h>
+      <x>790</x>
+      <y>650</y>
+      <w>250</w>
+      <h>130</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;&lt;&lt;-
 m1=1
 m2=1..n</panel_attributes>
-    <additional_attributes>10.0;10.0;110.0;10.0</additional_attributes>
+    <additional_attributes>10.0;100.0;210.0;100.0;210.0;10.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>650</x>
-      <y>200</y>
+      <x>670</x>
+      <y>230</y>
       <w>30</w>
       <h>100</h>
     </coordinates>
@@ -315,5 +307,17 @@ m1=1
 m2=n
 bg=black</panel_attributes>
     <additional_attributes>10.0;80.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>620</x>
+      <y>530</y>
+      <w>30</w>
+      <h>90</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.
+</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;70.0</additional_attributes>
   </element>
 </diagram>
