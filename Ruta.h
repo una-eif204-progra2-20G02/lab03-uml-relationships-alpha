@@ -18,7 +18,7 @@ private:
 public:
     Ruta();
     Ruta(Horario*, Paradas*);
-    virtual ~Ruta(Horario*, Paradas*);
+    virtual ~Ruta();
 //gets
     virtual Horario* getHorario();
     virtual Paradas* getParada();
