@@ -7,43 +7,24 @@
 
 
 
-#include <vector>
+#include "Vehiculo.h"
+using namespace std;
+class Bus : public Vehiculo {
+private:
 
-#include "Conductor.h"
-#include "Tiquete.h"
-
-class Tiquete;
-class Conductores;
-class Bus {
+    string _tipo;
 public:
     Bus();
-    Bus(std::string, std::string);
-    Bus(std::string, std::string,Tiquete*, Conductor*);
+    Bus(string tipo);
+    Bus(string,string,Conductor*,Pasajero*,Ruta*,string);
+
     virtual ~Bus();
 
-    virtual std::string getMarca()const;
-    virtual std::string getPlaca()const;
-    virtual Conductor* getConductor()const;
-    virtual Tiquete* getTiquete() const;
+    const string &getTipo() const;
 
+    void setTipo(const string &tipo);
 
-    virtual void setMarca(std::string);
-    virtual void setPlaca(std::string);
-    virtual void setConductor(Conductor*);
-    virtual void setTiquete(Tiquete*);
-
-    virtual void addConductor(Conductor*);
-    virtual void addTiquete(Tiquete*);
-
-    std::string toString() const;
-
-private:
-    std::string _marca;
-    std::string _placa;
-    Conductor* _conductor;
-    Tiquete* _tiquete;
-    std::vector<Conductor> _listaConductor;
-    std::vector<Tiquete> _listaTiquete;
+    virtual string toString();
 
 };
 
