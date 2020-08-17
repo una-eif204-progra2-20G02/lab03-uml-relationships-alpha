@@ -5,9 +5,9 @@
 #ifndef BASIC_00_EXAMPLE_PARADAS_H
 #define BASIC_00_EXAMPLE_PARADAS_H
 
-#include "TransportePublico.h"
+#include "ObjetoBase.h"
 
-class Paradas {
+class Paradas: public ObjetoBase {
 public:
     Paradas();
     Paradas(std::string);

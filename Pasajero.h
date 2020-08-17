@@ -9,11 +9,17 @@
 class Pasajero: public Persona {
 public:
     Pasajero();
-    Pasajero(std::string, std::string, std::string);
+    Pasajero(std::string, std::string, std::string, double);
     Pasajero(const Pasajero& orig);
     virtual ~Pasajero();
 
+    virtual double getPasaje()const;
+
+    virtual void setPasaje(double);
+
     virtual std::string toString()const;
+private:
+    double _pasaje;
 
 private:
 

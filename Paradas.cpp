@@ -25,7 +25,6 @@ void Paradas::setLugar(std::string lugar){
 
 std::string Paradas::toString() const{
     std::stringstream s;
-    s<<"Paradas: "<<"\n";
     s<<"El lugar de la parada es: "<<Paradas::getLugar()<<"\n";
     s<<"\n";
     return s.str();

@@ -4,8 +4,8 @@
 
 #ifndef BASIC_00_EXAMPLE_PERSONA_H
 #define BASIC_00_EXAMPLE_PERSONA_H
-#include "TransportePublico.h"
-class Persona:public TransportePublico {
+#include "ObjetoBase.h"
+class Persona:public ObjetoBase {
 public:
     Persona();
     Persona(std::string, std::string, std::string);

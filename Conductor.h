@@ -12,6 +12,7 @@ public:
     virtual ~Conductor();
 
     virtual double getSalario() const;
+
     virtual void setSalario(double);
 
     virtual std::string toString() const;
