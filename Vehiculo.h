@@ -8,7 +8,7 @@
 #include <vector>
 #include "Conductor.h"
 #include "Pasajero.h"
-#include "Ruta"
+#include "Ruta.h"
 using namespace std;
 class Vehiculo{
 private:
