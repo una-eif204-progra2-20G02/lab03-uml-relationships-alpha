@@ -17,6 +17,7 @@ int main(int argc, char** argv) {
     Persona* _p7=new Pasajero("Augusto", "Pinochet","5-5674-3467",400);
 
     Persona* _c0=new Conductor("Arturo","Sanez","1-2134-3235", 230000);
+    std::cout<<_p0->toString();
 
     return 0;
 }
