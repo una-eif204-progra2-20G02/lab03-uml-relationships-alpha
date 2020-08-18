@@ -8,14 +8,13 @@
 
 
 #include "Vehiculo.h"
-using namespace std;
-class Bus : public Vehiculo {
-private:
 
-    string _tipo;
+class Bus : public Vehiculo {
+
 public:
     Bus();
-    Bus(string,string,Conductor*,Pasajero*,Ruta*,string);
+    Bus(std::string);
+    Bus(std::string,std::string,Conductor*,Pasajero*,Ruta*,std::string);
 
     virtual ~Bus();
 
@@ -24,7 +23,9 @@ public:
     void setTipo(const std::string);
 
     virtual std::string toString();
+private:
 
+    std::string _tipo;
 };
 
 
