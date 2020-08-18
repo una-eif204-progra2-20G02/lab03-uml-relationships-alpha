@@ -39,13 +39,13 @@ void Bus::addPasajeros(Pasajero* pasajero)
 std::string Bus::toString() {
     std::stringstream s;
     s<<"Tipo transporte: "<< Bus::getTipo()<<"\n";
-    s<<"Datos: "<<"\n";
+    s<<"**************Datos:************ "<<"\n";
     s<<Vehiculo::toString()<<"\n";
-    s<<"Conductores: "<<"\n";
+    s<<"--------Conductores:------ "<<"\n";
     for(int i=0;i<_listaConductores.size();i++){//For type cycle from 0 to Conductor's size.
         s<<_listaConductores.data()[i].toString()<<"\n";//Shows data contained in the collection.
     }
-    s<<"Pasajeros: "<<"\n";
+    s<<"-------Pasajeros:------ "<<"\n";
     for(int i=0;i<_listaPasajeros.size();i++) {//For type cycle from 0 to Pasajero's size.
         s << _listaPasajeros.data()[i].toString() << "\n";//Shows data contained in the collection.
 

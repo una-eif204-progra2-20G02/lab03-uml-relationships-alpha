@@ -67,7 +67,7 @@ void Vehiculo::setRuta(Ruta *ruta) {
 
 std::string Vehiculo::toString() const{
   std::stringstream s;
-  s<<"Ruta: " << getRuta()->toString()<<"\n";
+  s<<"------Ruta: -----\n" << getRuta()->toString()<<"\n";
   s<<"Marca: "<<getMarca()<<"\n";
   s<<"Placa: "<<getPlaca()<<"\n";
 
