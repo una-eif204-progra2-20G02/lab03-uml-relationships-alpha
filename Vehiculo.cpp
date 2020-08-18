@@ -7,10 +7,11 @@ Vehiculo::Vehiculo()
     _marca = "";
     _placa = "";
 }
-Vehiculo::Vehiculo(std::string marca, std::string placa)
+Vehiculo::Vehiculo(std::string marca, std::string placa, Ruta* ruta)
 {
     _marca = marca;
     _placa = placa;
+    _ruta=ruta;
 }
 Vehiculo::Vehiculo(std::string placa, std::string marca, Conductor* conductor,Pasajero* pasajero, Ruta* ruta)
 {
@@ -63,27 +64,12 @@ void Vehiculo::setPasajero(Pasajero *pasajero) {
 void Vehiculo::setRuta(Ruta *ruta) {
     _ruta = ruta;
 }
-void Vehiculo::addConductores(Conductor* conductor)
-{
-    _listaConductores.push_back(*conductor);
-}
-void Vehiculo::addPasajeros(Pasajero* pasajero)
-{
-    _listaPasajeros.push_back(*pasajero);
-}
+
 std::string Vehiculo::toString() const{
   std::stringstream s;
   s<<"Ruta: " << getRuta()->toString()<<"\n";
   s<<"Marca: "<<getMarca()<<"\n";
   s<<"Placa: "<<getPlaca()<<"\n";
-  s<<"Conductores: "<<"\n";
-    for(int i=0;i<_listaConductores.size();i++){//For type cycle from 0 to Conductor's size.
-        s<<_listaConductores.data()[i].toString()<<"\n";//Shows data contained in the collection.
-    }
-  s<<"Pasajeros: "<<"\n";
-    for(int i=0;i<_listaPasajeros.size();i++) {//For type cycle from 0 to Pasajero's size.
-        s << _listaPasajeros.data()[i].toString() << "\n";//Shows data contained in the collection.
 
-    }
   return s.str();
 }

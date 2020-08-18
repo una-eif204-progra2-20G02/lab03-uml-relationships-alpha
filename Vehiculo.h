@@ -16,7 +16,7 @@ class Vehiculo{
 
 public:
     Vehiculo();
-    Vehiculo(std::string, std::string);
+    Vehiculo(std::string, std::string, Ruta*);
     Vehiculo(std::string,std::string,Conductor*,Pasajero*,Ruta*);
     virtual ~Vehiculo();
 
@@ -32,17 +32,16 @@ public:
     void setPasajero(Pasajero*);
     void setRuta(Ruta*);
 
-    void addConductores(Conductor*);
-    void addPasajeros(Pasajero*);
+    virtual void addConductores(Conductor*)=0;
+    virtual void addPasajeros(Pasajero*)=0;
 
     virtual std::string toString()const;
-private:
+protected:
     std::string _marca;
     std::string _placa;
     Conductor* _conductor;
     Pasajero* _pasajero;
     Ruta* _ruta;
-    std::vector<Conductor> _listaConductores;
-    std::vector<Pasajero> _listaPasajeros;
+
 };
 #endif //LAB03_UML_RELATIONSHIPS_ALPHA_VEHICULO_H
