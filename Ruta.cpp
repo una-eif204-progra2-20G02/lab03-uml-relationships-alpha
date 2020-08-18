@@ -5,29 +5,26 @@
 #include "Ruta.h"
 
 Ruta::Ruta(){
-    _horario=NULL;
-    _paradas=NULL;
-_
+
 }
-Ruta::Ruta(Horario* horario, Paradas* parada){
+Ruta::Ruta(Horario* horario, Parada* parada){
     _horario=horario;
     _paradas=parada;
 }
 Ruta:: ~Ruta(){
-    if(_horario!=NULL){
-        delete _horario;
-    }
-    if(_paradas!=NULL){
-        delete _paradas;
-    }
+_listaHorario.clear();
 }
 //gets
- Horario* Ruta::getHorario(){return _horario;}
- Parada* Ruta::getParada()(return _paradas;)
+ Horario* Ruta::getHorario()const {
+    return _horario;
+}
+ Parada* Ruta::getParada()const {
+    return _paradas;
+}
 //sets
 
- void Ruta::setHorario(Horario* horario)(_horario=horario;)
- void Ruta::setParada(Paradas* parada)(_paradas=parada;)
+ void Ruta::setHorario(Horario* horario){_horario=horario;}
+ void Ruta::setParada( Parada* parada){_paradas=parada;}
 //adds
 void Ruta::addHorario(Horario* horario){
     _listaHorario.push_back(*horario);
@@ -38,8 +35,15 @@ void Ruta::addParada(Paradas* parada){
 //string
 std:: string Ruta::toString(){
     std::stringstream  s;
-    s<<"Horario: "<<getHorario()->toString()<<"\n";
-    s<<"Paradas: "<<getParada();
+    s<<"Horario: "<<"\n";
+    for(int i=0;i<_listaHorario.size();i++) {//For type cycle from 0 to Pasajero's size.
+        s << _listaHorario.data()[i].toString() << "\n";//Shows data contained in the collection.
 
+    }
+    s<<"Paradas: "<<"\n";
+    for(int i=0;i<_listaParadas.size();i++) {//For type cycle from 0 to Pasajero's size.
+        s << _listaParadas.data()[i].toString() << "\n";//Shows data contained in the collection.
+
+    }
     return s.str();
 }

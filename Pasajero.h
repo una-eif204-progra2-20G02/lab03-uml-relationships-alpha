@@ -10,7 +10,6 @@ class Pasajero: public Persona {
 public:
     Pasajero();
     Pasajero(std::string, std::string, std::string, double);
-    Pasajero(const Pasajero& orig);
     virtual ~Pasajero();
 
     virtual double getPasaje()const;

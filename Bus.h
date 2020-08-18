@@ -20,11 +20,11 @@ public:
 
     virtual ~Bus();
 
-    const string &getTipo() const;
+    const std::string getTipo() const;
 
-    void setTipo(const string &tipo);
+    void setTipo(const std::string);
 
-    virtual string toString();
+    virtual std::string toString();
 
 };
 

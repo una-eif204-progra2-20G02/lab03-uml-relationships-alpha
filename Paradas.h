@@ -4,10 +4,12 @@
 
 #ifndef BASIC_00_EXAMPLE_PARADAS_H
 #define BASIC_00_EXAMPLE_PARADAS_H
+#include <iostream>
+#include <string>
+#include <sstream>
 
-#include "ObjetoBase.h"
 
-class Paradas: public ObjetoBase {
+class Paradas{
 public:
     Paradas();
     Paradas(std::string);
@@ -15,7 +17,7 @@ public:
 
     virtual std::string getLugar() const;
 
-    virtual void setLugar(std::string);
+    virtual void setLugar(const std::string);
 
     virtual std::string toString() const;
 

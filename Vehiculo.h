@@ -6,35 +6,43 @@
 #define LAB03_UML_RELATIONSHIPS_ALPHA_VEHICULO_H
 #include <iostream>
 #include <vector>
+#include <sstream>
+#include <string>
 #include "Conductor.h"
 #include "Pasajero.h"
 #include "Ruta.h"
-using namespace std;
+
 class Vehiculo{
-private:
-string _marca;
-string _placa;
-Conductor* _conductor;
-Pasajero* _pasajero;
-Ruta* _ruta;
-vector<Conductor> _vC;
-vector<Pasajero> _vP;
+
 public:
     Vehiculo();
-    Vehiculo(string,string,Conductor*,Pasajero*,Ruta*);
+    Vehiculo(std::string, std::string);
+    Vehiculo(std::string,std::string,Conductor*,Pasajero*,Ruta*);
     virtual ~Vehiculo();
-    const string &getPlaca() const;
-    const string &getMarca() const;
-    Conductor *getConductor() const;
-    Pasajero *getPasajero() const;
-    Ruta *getRuta() const;
-    void setMarca(const string &marca);
-    void setPlaca(const string &placa);
-    void setConductor(Conductor *conductor);
-    void setPasajero(Pasajero *pasajero);
-    void setRuta(Ruta *ruta);
+
+    std::string getPlaca() const;
+    std::string getMarca() const;
+    Conductor* getConductor() const;
+    Pasajero* getPasajero() const;
+    Ruta* getRuta() const;
+
+    void setMarca(const std::string);
+    void setPlaca(const std::string);
+    void setConductor(Conductor*);
+    void setPasajero(Pasajero*);
+    void setRuta(Ruta*);
+
     void addConductores(Conductor*);
     void addPasajeros(Pasajero*);
-    virtual string toString();
+
+    virtual std::string toString()const;
+private:
+    std::string _marca;
+    std::string _placa;
+    Conductor* _conductor;
+    Pasajero* _pasajero;
+    Ruta* _ruta;
+    std::vector<Conductor> _listaConductores;
+    std::vector<Pasajero> _listaPasajeros;
 };
 #endif //LAB03_UML_RELATIONSHIPS_ALPHA_VEHICULO_H
