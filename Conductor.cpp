@@ -31,6 +31,6 @@ std::string Conductor::toString() const{
     s<<"Conductor: "<<"\n";
     s<<"\n";
     s<<Persona::toString();
-    s<<"El Salario es de: "<< Conductor::getSalario()<<"\n";
+    s<<"El Salario es de: "<< Conductor::getSalario()<<" colones"<<"\n";
     return s.str();
 }
