@@ -15,6 +15,9 @@ int main(int argc, char** argv) {
     Persona* _p5=new Pasajero("Eripides", "Conepcion","3-3786-0956",400);
     Persona* _p6=new Pasajero("Pedro", "Perez","4-2464-6543",400);
     Persona* _p7=new Pasajero("Augusto", "Pinochet","5-5674-3467",400);
+
+    Persona _c0=new Conductor("Arturo","Sanez","1-2134-3235", 230000);
+
     return 0;
 }
 
