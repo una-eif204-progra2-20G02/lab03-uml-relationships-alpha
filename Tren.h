@@ -21,7 +21,7 @@ public:
     virtual std::string getTipo()const;
     virtual void setTipo(std::string);
 //tostring
-    virtual std::string toString() ;
+    std::string toString() const;
 
 private:
     std::string _tipo;

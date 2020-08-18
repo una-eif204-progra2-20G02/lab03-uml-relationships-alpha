@@ -7,14 +7,14 @@
 
 #include "Horario.h"
 #include "Paradas.h"
-
+using namespace std;
 class Ruta{
 
 private:
     Horario* _horario;
     Paradas* _paradas;
-    std::vector<Paradas> _listaParadas;
-    std::vector<Horario> _listaHorario;
+    vector<Paradas> _listaParadas;
+    vector<Horario> _listaHorario;
 public:
     Ruta();
     Ruta(Horario*, Paradas*);
