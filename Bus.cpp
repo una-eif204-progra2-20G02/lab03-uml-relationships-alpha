@@ -6,21 +6,25 @@
 Bus::Bus() {
     _tipo = "";
 }
+Bus::Bus(string tipo) : Vehiculo(){
+    _tipo = tipo;
+}
 Bus::~Bus() {
 
 }
-Bus::Bus(string marca,string placa,Conductor* conductor,Pasajero* pasajero, Ruta* ruta,string tipo) : Vehiculo(marca,placa,conductor,pasajero,ruta)
-{
-    _tipo = tipo;
+
+const std::string Bus::getTipo() const {
+    return _tipo;
 }
 
-void Bus::setTipo(const string &tipo) {
+void Bus::setTipo(const string tipo) {
     _tipo = tipo;
 }
 string Bus::toString() {
     stringstream s;
-    s<<Vehiculo::toString()<<endl;
-    s<<"Tipo: "<<getTipo()<<endl;
+    s<<"Ruta: " << Bus::getTipo()<<"\n";
+    s<<"Datos: "<<"\n";
+    s<<Vehiculo::toString()<<"\n";
     return s.str();
 }
 

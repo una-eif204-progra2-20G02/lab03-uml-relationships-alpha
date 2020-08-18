@@ -1,25 +1,23 @@
-//
-// Created by computer on 8/12/2020.
-//
+
 
 
 #include "Vehiculo.h"
 #include "Tren.h"
-using namespace std;
+#include "Bus.h"
 
-/*
- *
- */
 int main(int argc, char** argv) {
-    Horario* h1 = new Horario("22:00 pm","22:10 pm");
-    Paradas* par1 = new Paradas("Hospital");
-    Conductor* c1 = new Conductor("adolfo","avila","402440766",1000000);
-    Pasajero* p1 = new Pasajero("adolfo","avila","402440766",290);
-    Ruta* r1 = new Ruta(h1,par1);
-    Tren* t1 = new Tren("bala","marcedez","AED505",p1,c1,r1);
-    t1->addConductores(c1);
-    t1->addPasajeros(p1);
-    cout<<t1->toString();
-      return 0;
+
+    Persona* _p0=new Pasajero("Esteban", "Martinez","1-2464-3456",300);
+    Persona* _p1=new Pasajero("Marco", "Polo","4-2567-6754",300);
+    Persona* _p2=new Pasajero("Tulio", "Ciceron","1-6743-5436",300);
+    Persona* _p3=new Pasajero("Roberto", "Martin","1-4545-4356",300);
+    Persona* _p4=new Pasajero("Brandon", "Montero","4-5678-7644",400);
+    Persona* _p5=new Pasajero("Eripides", "Conepcion","3-3786-0956",400);
+    Persona* _p6=new Pasajero("Pedro", "Perez","4-2464-6543",400);
+    Persona* _p7=new Pasajero("Augusto", "Pinochet","5-5674-3467",400);
+
+    Persona _c0=new Conductor("Arturo","Sanez","1-2134-3235", 230000);
+
+    return 0;
 }
 

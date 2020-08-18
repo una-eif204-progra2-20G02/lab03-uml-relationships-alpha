@@ -35,8 +35,9 @@ void Tren::setTipo(std::string tipo) {
 
 std::string Tren::toString() const{
     std::stringstream s;
-    s<<"Datos del Tren: "<<"\n";
-    s<<this->toString()<<"\n";
+    s<<"Tipo vehiculo: "<<Tren::getTipo()<<"\n";
+    s<<"Datos : "<<"\n";
+    s<<Vehiculo::toString()<<"\n";
     return s.str();
 }
 

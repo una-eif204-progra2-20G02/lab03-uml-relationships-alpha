@@ -4,8 +4,10 @@
 
 #ifndef BASIC_00_EXAMPLE_PERSONA_H
 #define BASIC_00_EXAMPLE_PERSONA_H
-#include "ObjetoBase.h"
-class Persona:public ObjetoBase {
+#include <iostream>
+#include <sstream>
+#include <string>
+class Persona {
 public:
     Persona();
     Persona(std::string, std::string, std::string);
@@ -15,9 +17,9 @@ public:
     virtual std::string getApellido() const;
     virtual std::string getCedula() const;
 
-    virtual void setNombre (std::string);
-    virtual void setApellido (std::string);
-    virtual void setCedula (std::string);
+    virtual void setNombre (const std::string);
+    virtual void setApellido (const std::string);
+    virtual void setCedula (const std::string);
 
     virtual std::string toString()const;
 

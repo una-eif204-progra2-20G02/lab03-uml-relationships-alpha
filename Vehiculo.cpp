@@ -7,8 +7,12 @@ Vehiculo::Vehiculo()
     _marca = "";
     _placa = "";
 }
-
-Vehiculo::Vehiculo(string placa, string marca, Conductor* conductor,Pasajero* pasajero, Ruta* ruta)
+Vehiculo::Vehiculo(std::string marca, std::string placa)
+{
+    _marca = marca;
+    _placa = placa;
+}
+Vehiculo::Vehiculo(std::string placa, std::string marca, Conductor* conductor,Pasajero* pasajero, Ruta* ruta)
 {
     _placa = placa;
     _marca = marca;
@@ -21,30 +25,30 @@ Vehiculo::~Vehiculo() {
 
 }
 
-const string &Vehiculo::getMarca() const {
+std::string Vehiculo::getMarca() const {
     return _marca;
 }
 
-const string &Vehiculo::getPlaca() const {
+std::string Vehiculo::getPlaca() const {
     return _placa;
 }
 
-Conductor *Vehiculo::getConductor() const {
+Conductor* Vehiculo::getConductor() const {
     return _conductor;
 }
 
-Pasajero *Vehiculo::getPasajero() const {
+Pasajero* Vehiculo::getPasajero() const {
     return _pasajero;
 }
-Ruta *Vehiculo::getRuta() const {
+Ruta* Vehiculo::getRuta() const {
     return _ruta;
 }
 
-void Vehiculo::setMarca(const string &marca) {
+void Vehiculo::setMarca(const std::string marca) {
     _marca = marca;
 }
 
-void Vehiculo::setPlaca(const string &placa) {
+void Vehiculo::setPlaca(const std::string placa) {
     _placa = placa;
 }
 
@@ -61,25 +65,25 @@ void Vehiculo::setRuta(Ruta *ruta) {
 }
 void Vehiculo::addConductores(Conductor* conductor)
 {
-    _vC.push_back(*conductor);
+    _listaConductores.push_back(*conductor);
 }
 void Vehiculo::addPasajeros(Pasajero* pasajero)
 {
-    _vP.push_back(*pasajero);
+    _listaPasajeros.push_back(*pasajero);
 }
-string Vehiculo::toString() {
-  stringstream s;
-  s<<"Marca: "<<getMarca()<<endl;
-  s<<"Placa: "<<getPlaca()<<endl;
-  s<<"Conductores: "<<endl;
-    for(int i=0;i<_vC.size();i++){//For type cycle from 0 to Conductor's size.
-        s<<_vC.data()[i].toString()<<"\n";//Shows data contained in the collection.
+std::string Vehiculo::toString() const{
+  std::stringstream s;
+  s<<"Ruta: " << getRuta()->toString()<<"\n";
+  s<<"Marca: "<<getMarca()<<"\n";
+  s<<"Placa: "<<getPlaca()<<"\n";
+  s<<"Conductores: "<<"\n";
+    for(int i=0;i<_listaConductores.size();i++){//For type cycle from 0 to Conductor's size.
+        s<<_listaConductores.data()[i].toString()<<"\n";//Shows data contained in the collection.
     }
-  s<<"Pasajero: "<<endl;
-    for(int i=0;i<_vP.size();i++){//For type cycle from 0 to Pasajero's size.
-        s<<_vP.data()[i].toString()<<"\n";//Shows data contained in the collection.
+  s<<"Pasajeros: "<<"\n";
+    for(int i=0;i<_listaPasajeros.size();i++) {//For type cycle from 0 to Pasajero's size.
+        s << _listaPasajeros.data()[i].toString() << "\n";//Shows data contained in the collection.
 
     }
-  s<<"Ruta: " << getRuta()<<endl;
   return s.str();
 }

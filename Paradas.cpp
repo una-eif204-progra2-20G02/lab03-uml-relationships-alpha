@@ -19,7 +19,7 @@ std::string Paradas::getLugar() const{
     return _lugar;
 }
 
-void Paradas::setLugar(std::string lugar){
+void Paradas::setLugar(const std::string lugar){
     _lugar=lugar;
 }
 

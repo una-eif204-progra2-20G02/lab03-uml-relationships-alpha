@@ -33,14 +33,14 @@ std::string Persona::getCedula() const{
     return _cedula;
 }
 
-void Persona::setNombre(std::string nombre){
+void Persona::setNombre(const std::string nombre){
     _nombre=nombre;
 }
 
-void Persona::setApellido(std::string apellido){
+void Persona::setApellido(const std::string apellido){
     _apellido=apellido;
 }
-void Persona::setCedula(std::string cedula){
+void Persona::setCedula(const std::string cedula){
     _cedula=cedula;
 }
 std::string Persona::toString() const{

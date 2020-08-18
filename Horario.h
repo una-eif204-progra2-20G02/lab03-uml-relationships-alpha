@@ -4,8 +4,10 @@
 
 #ifndef LAB03_UML_RELATIONSHIPS_ALPHA_HORARIO_H
 #define LAB03_UML_RELATIONSHIPS_ALPHA_HORARIO_H
-#include "ObjetoBase.h"
-class Horario:public ObjetoBase {
+#include <iostream>
+#include <string>
+#include <sstream>
+class Horario{
 public:
     Horario();
     Horario(std::string,std::string);
