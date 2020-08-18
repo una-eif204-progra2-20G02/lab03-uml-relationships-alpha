@@ -8,7 +8,7 @@
 #include <sstream>
 #include <string>
 
-class ObjetoBase {
+struct ObjetoBase {
 ~ObjetoBase();
 virtual std::string toString()const = 0;
 

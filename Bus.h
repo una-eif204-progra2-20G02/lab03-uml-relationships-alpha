@@ -15,7 +15,6 @@ private:
     string _tipo;
 public:
     Bus();
-    Bus(string tipo);
     Bus(string,string,Conductor*,Pasajero*,Ruta*,string);
 
     virtual ~Bus();

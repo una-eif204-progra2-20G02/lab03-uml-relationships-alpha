@@ -6,15 +6,12 @@
 Bus::Bus() {
     _tipo = "";
 }
-Bus::Bus(string tipo) : Vehiculo(){
-    _tipo = tipo;
-}
 Bus::~Bus() {
 
 }
-
-const string &Bus::getTipo() const {
-    return _tipo;
+Bus::Bus(string marca,string placa,Conductor* conductor,Pasajero* pasajero, Ruta* ruta,string tipo) : Vehiculo(marca,placa,conductor,pasajero,ruta)
+{
+    _tipo = tipo;
 }
 
 void Bus::setTipo(const string &tipo) {
