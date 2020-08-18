@@ -3,6 +3,7 @@
 //
 
 #include "Bus.h"
+//Buildeers
 Bus::Bus() {
     _tipo = "";
 }
@@ -14,21 +15,21 @@ Bus::Bus(std::string placa, std::string marca, Conductor * conductor, Pasajero *
 Vehiculo(placa, marca, conductor, pasajero, ruta),_tipo(tipo){
 
 }
+//Destructor
 Bus::~Bus() {
 
 }
-Bus::Bus(string, string, Conductor *, Pasajero *, Ruta *, string) {}
-
-Bus::Bus(string marca,string placa,Conductor* conductor,Pasajero* pasajero, Ruta* ruta,string tipo) : Vehiculo(marca,placa,conductor,pasajero,ruta)
-{
+//get methd
+std::string Bus::getTipo() const {
+    return _tipo;
+}
+//set method
+void Bus::setTipo(const std::string tipo) {
     _tipo = tipo;
 }
-
-void Bus::setTipo(const string tipo) {
-    _tipo = tipo;
-}
-string Bus::toString() {
-    stringstream s;
+//to string method
+std::string Bus::toString() {
+    std::stringstream s;
     s<<"Tipo transporte: "<< Bus::getTipo()<<"\n";
     s<<"Datos: "<<"\n";
     s<<Vehiculo::toString()<<"\n";
