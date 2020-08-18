@@ -7,7 +7,7 @@
 Ruta::Ruta(){
 
 }
-Ruta::Ruta(Horario* horario, Parada* parada){
+Ruta::Ruta(Horario* horario, Paradas* parada){
     _horario=horario;
     _paradas=parada;
 }
@@ -18,13 +18,13 @@ _listaHorario.clear();
  Horario* Ruta::getHorario()const {
     return _horario;
 }
- Parada* Ruta::getParada()const {
+ Paradas* Ruta::getParada()const {
     return _paradas;
 }
 //sets
 
  void Ruta::setHorario(Horario* horario){_horario=horario;}
- void Ruta::setParada( Parada* parada){_paradas=parada;}
+ void Ruta::setParada( Paradas* parada){_paradas=parada;}
 //adds
 void Ruta::addHorario(Horario* horario){
     _listaHorario.push_back(*horario);

@@ -18,7 +18,7 @@ public:
 
     virtual ~Bus();
 
-    const std::string getTipo() const;
+    std::string getTipo() const;
 
     void setTipo(const std::string);
 

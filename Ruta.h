@@ -8,20 +8,20 @@
 #include "Horario.h"
 #include "Paradas.h"
 class Horario;
-class Parada;
+class Paradas;
 class Ruta{
 
 
 public:
     Ruta();
-    Ruta(Horario*, Parada*);
+    Ruta(Horario*, Paradas*);
     virtual ~Ruta();
 //gets
     virtual Horario* getHorario()const ;
-    virtual Parada* getParada()const;
+    virtual Paradas* getParada()const;
 //sets
     virtual void setHorario( Horario*);
-    virtual void setParada(Parada*);
+    virtual void setParada(Paradas*);
 //adds
     virtual void addHorario(Horario*);
     virtual void addParada(Paradas*);
@@ -30,7 +30,7 @@ public:
  //
 private:
     Horario* _horario;
-    Parada* _paradas;
+    Paradas* _paradas;
     std::vector<Paradas> _listaParadas;
     std::vector<Horario> _listaHorario;
 };
