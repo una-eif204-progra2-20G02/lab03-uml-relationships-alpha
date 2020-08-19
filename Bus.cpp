@@ -17,6 +17,7 @@ Vehiculo(placa, marca, conductor, pasajero, ruta),_tipo(tipo){
 }
 //Destructor
 Bus::~Bus() {
+_listaConductores.clear();
 
 }
 //get methd
