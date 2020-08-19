@@ -13,6 +13,8 @@ Ruta::Ruta(Horario* horario, Paradas* parada){
 }
 Ruta:: ~Ruta(){
 _listaHorario.clear();
+delete _paradas;
+delete _horario;
 }
 //gets
  Horario* Ruta::getHorario()const {

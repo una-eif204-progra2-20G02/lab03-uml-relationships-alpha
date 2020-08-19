@@ -19,6 +19,8 @@ Tren::Tren(std::string tipo, std::string marca, std::string placa,Pasajero* pasa
 }
 
 Tren::~Tren() {
+    _listaConductores.clear();
+
 }
 
 //gets

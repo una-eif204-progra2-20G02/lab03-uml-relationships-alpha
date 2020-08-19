@@ -23,7 +23,9 @@ Vehiculo::Vehiculo(std::string placa, std::string marca, Conductor* conductor,Pa
 }
 
 Vehiculo::~Vehiculo() {
-
+delete _pasajero;
+delete _ruta;
+delete _conductor;
 }
 
 std::string Vehiculo::getMarca() const {
